@@ -19,7 +19,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#db3434",
+    "theme_color": "#00805a",
     "background_color": "#3367D6",
     "start_url": "./shopping-app/",
     "display": "standalone",
