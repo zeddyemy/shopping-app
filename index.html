@@ -20,34 +20,36 @@
     </head>
 
     <body>
-        <nav>
-            <p> My List </p>
-        </nav>
-        <div class="container">
-            <form id="itemForm">
-                <label>
-                    Name of Item:
-                    <input type="text" id="nameInput" required>
-                </label>
-
-                <label>
-                    Quantity:
-                    <input type="number" id="quantityInput" value="1">
-                </label>
-
-                <label>
-                    Price:
-                    <input type="text" id="priceInput" value="0">
-                </label>
-
-                <button type="submit" id="addItemButton">
-                    Add Item
-                </button>
-            </form>
+        <div class="wrapper">
+            <nav>
+                <p> My List </p>
+            </nav>
+            <div class="container">
+                <form id="itemForm">
+                    <label>
+                        Name of Item:
+                        <input type="text" id="nameInput" required>
+                    </label>
+    
+                    <label>
+                        Quantity:
+                        <input type="number" id="quantityInput" value="1">
+                    </label>
+    
+                    <label>
+                        Price:
+                        <input type="text" id="priceInput" value="0">
+                    </label>
+    
+                    <button type="submit" id="addItemButton">
+                        Add Item
+                    </button>
+                </form>
+            </div>
+    
+            <div id="itemsDiv"></div>
+            <div id="totalPriceDiv"></div>
         </div>
-
-        <div id="itemsDiv"></div>
-        <div id="totalPriceDiv"></div>
 
         <script src="./index.js"></script>
     </body>

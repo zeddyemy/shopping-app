@@ -9,6 +9,7 @@
 body {
     background: #f2f2f2;
 }
+
 nav {
     background: #00805a;
     height: 3rem;
@@ -16,6 +17,21 @@ nav {
     color: white;
     padding-left: 2rem;
     margin-bottom: 1rem;
+}
+@media screen and (min-width: 560px) {
+    body {
+        padding: 50px 0px 50px 0px;
+    }
+    .wrapper {
+        max-width: 450px;
+        min-height: calc(100vh - 100px);
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgb(0 0 0 / 45%);
+    }
+    nav {
+        border-radius: 10px 10px 0px 0px;
+    }
 }
 
 .container {
@@ -46,6 +62,7 @@ nav {
 
 #itemsDiv {
     margin: 3rem 0 2rem 0;
+    padding: 0px 1rem;
 }
 
 .item {
@@ -53,15 +70,80 @@ nav {
     grid-template-columns: 1fr 2fr 1fr;
     background: #eaeaea;
     margin: 0 0 0.5rem 0;
+    border-radius: 6px;
 }
 
+.checkboxLabel {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    height: 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    /*height: 100%;
+    width: 2.5rem;*/
+}
+/* Create a custom checkbox */
+.checkMark {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 2.5rem;
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    border-radius: 6px 0px 0px 6px;
+}
+/* On mouse-over, add a grey background color */
+.checkboxLabel:hover input~.checkMark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxLabel input:checked~.checkMark {
+    background-color: #2debb2d8;
+    border: 1px solid #2debb2d8;
+    border-radius: 6px 0px 0px 6px;
+}
+/* Create the checkMark/indicator (hidden when not checked) */
+.checkMark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkMark when checked */
+.checkboxLabel input:checked~.checkMark:after {
+    display: block;
+}
+/* Style the checkMark/indicator */
+.checkboxLabel .checkMark:after {
+    left: 13.5px;
+    top: 8px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .itemInfo {
     text-align: center;
+}
+
+#totalPriceDiv {
+    padding: 0px 1rem;
 }
 
 .deleteButton {
@@ -72,6 +154,7 @@ nav {
     font-size: 0.8rem;
     width: 2.5rem;
     height: 100%;
+    border-radius: 0px 6px 6px 0px;
 }
 
 .deleteButton:active {

@@ -10,13 +10,14 @@ const populateItemsDiv = async () => { // populate itemsDiv function
 
     itemsDiv.innerHTML = allItems.map(item => `
         <div class="item ${item.isPurchased && 'purchased'}">
-            <label>
+            <label class="checkboxLabel">
                 <input 
                     type="checkbox"
                     class="checkbox"
                     onchange="toggleItemStatus(event, ${item.id})"
                     ${item.isPurchased && 'checked'}
                 >
+                <span class="checkMark"></span>
             </label>
             
             <div class="itemInfo">
