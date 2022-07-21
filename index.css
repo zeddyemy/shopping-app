@@ -6,17 +6,29 @@
     -webkit-box-sizing: border-box;
 }
 
+:root {
+    --rounded: 6px;
+    --brightness: brightness(80%) contrast(1.1);
+    --transition: all ease-in-out 0.5s;
+    --theme-color: #00805a;
+}
+
 body {
     background: #f2f2f2;
 }
+.wrapper {
+    transition: var(--transition);
+    max-width: 100%;
+}
 
 nav {
-    background: #00805a;
+    background: var(--theme-color);
     height: 3rem;
     line-height: 3rem;
     color: white;
     padding-left: 2rem;
     margin-bottom: 1rem;
+    transition: var(--transition);
 }
 @media screen and (min-width: 560px) {
     body {
@@ -36,6 +48,7 @@ nav {
 
 .container {
     padding: 1rem;
+    transition: var(--transition);
 }
 
 #itemForm label {
@@ -47,6 +60,7 @@ nav {
     height: 2rem;
     text-align: center;
     border: 1px solid #bfbfbf;
+    transition: var(--transition);
 }
 
 #quantityInput, #priceInput {
@@ -55,9 +69,10 @@ nav {
 
 #addItemButton {
     border: unset;
-    background: #00805a;
+    background: var(--theme-color);
     color: #fff;
     padding: 0.5rem;
+    transition: var(--transition);
 }
 
 #itemsDiv {
@@ -71,6 +86,7 @@ nav {
     background: #eaeaea;
     margin: 0 0 0.5rem 0;
     border-radius: 6px;
+    transition: var(--transition);
 }
 
 .checkboxLabel {
@@ -83,6 +99,7 @@ nav {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: var(--transition);
 }
 .checkbox {
     position: absolute;
@@ -162,7 +179,8 @@ nav {
 }
 
 .purchased {
-    background: #00805a;
+    transition: var(--transition);
+    background: var(--theme-color);
     color: #fff;
 }
 
