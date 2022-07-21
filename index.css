@@ -84,7 +84,7 @@ nav {
     -ms-user-select: none;
     user-select: none;
 }
-.checkbox {
+.checkBox {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -93,7 +93,7 @@ nav {
     /*height: 100%;
     width: 2.5rem;*/
 }
-/* Create a custom checkbox */
+/* Create a custom checkBox */
 .checkMark {
     position: absolute;
     top: 0;

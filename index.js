@@ -13,7 +13,7 @@ const populateItemsDiv = async () => { // populate itemsDiv function
             <label class="checkboxLabel">
                 <input 
                     type="checkbox"
-                    class="checkbox"
+                    class="checkBox"
                     onchange="toggleItemStatus(event, ${item.id})"
                     ${item.isPurchased && 'checked'}
                 >
